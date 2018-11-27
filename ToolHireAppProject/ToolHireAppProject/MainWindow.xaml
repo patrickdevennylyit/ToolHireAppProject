@@ -49,9 +49,7 @@
         <Button Content="LOGON" Name="btnLOGON" Grid.Column="5" Grid.Row="7" Width="100" Height="20" Click="BtnLOGON_Click" />
         <Button Content="EXIT" Name="btnEXIT" Grid.Column="3" Grid.Row="7" Width="100" Height="20"/>
 
-        <ComboBox Name="cboUserNames" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Height="20" >
-            
-        </ComboBox>
+
                
 
     </Grid>
