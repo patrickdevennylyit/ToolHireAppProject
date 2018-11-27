@@ -44,7 +44,7 @@
         <TextBlock Text="Username" Grid.Column="1" Grid.Row="2"/>
         <TextBox Name="tbxUsername" Grid.Column="2" Grid.Row="2" Width="100" />
         <TextBlock Text="Password" Grid.Column="1" Grid.Row="4"/>
-        <PasswordBox Grid.Column="2" Grid.Row="4" Width="100" />
+        <PasswordBox Name="pbxPassword" Grid.Column="2" Grid.Row="4" Width="100" />
 
         <Button Content="LOGON" Name="btnLOGON" Grid.Column="5" Grid.Row="7" Width="100" Height="20" Click="BtnLOGON_Click" />
         <Button Content="EXIT" Name="btnEXIT" Grid.Column="3" Grid.Row="7" Width="100" Height="20"/>
