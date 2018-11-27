@@ -24,5 +24,10 @@ namespace ToolHireAppProject
         {
             InitializeComponent();
         }
+
+        private void BtnLOGON_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
