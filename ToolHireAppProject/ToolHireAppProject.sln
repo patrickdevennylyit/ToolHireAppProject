@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolHireAppProject", "ToolHireAppProject\ToolHireAppProject.csproj", "{79244AB5-4580-45B5-AA1B-92C650BF9F5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolHireAppUI", "ToolHireAppProject\ToolHireAppUI.csproj", "{79244AB5-4580-45B5-AA1B-92C650BF9F5C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLibrary", "DBLibrary\DBLibrary.csproj", "{E96C927B-7515-4787-9EB0-AEDDBC17B381}"
 EndProject

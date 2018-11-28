@@ -5,52 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToolHireAppProject"
         mc:Ignorable="d"
-        Title="Tooled Up Booking App" MinHeight="450" MinWidth="800" Height="450" Width="500">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="Tooled Up Booking App" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="10" />
-            <ColumnDefinition Width="auto" />
-            
-            <ColumnDefinition Width="20" />
-
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="5" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="20" />
         </Grid.RowDefinitions>
-        <TextBlock Text="PLEASE LOGON" 
-                   Grid.Row="1" 
-                   Grid.Column="1" 
-                   FontSize="20" 
-                   FontFamily="Ariel" 
-                   FontStyle="Normal" 
-                   FontWeight="Bold"
-                   TextDecorations="Underline" 
-                   Grid.ColumnSpan="2"
-                   Margin="5"/> 
 
-        <TextBlock Text="Username" Grid.Column="1" Grid.Row="2"/>
-        <TextBox Name="tbxUsername" Grid.Column="2" Grid.Row="2" Width="100" />
-        <TextBlock Text="Password" Grid.Column="1" Grid.Row="4"/>
-        <PasswordBox Name="pbxPassword" Grid.Column="2" Grid.Row="4" Width="100" />
+        <Label Name="lblHeading" 
+               Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="3" 
+               HorizontalContentAlignment="Center" 
+               FontSize="20" 
+               Content="Please Login to the Tool Hire Booking Application" />
 
-        <Button Content="LOGON" Name="btnLOGON" Grid.Column="5" Grid.Row="7" Width="100" Height="20" Click="BtnLOGON_Click" />
-        <Button Content="EXIT" Name="btnEXIT" Grid.Column="3" Grid.Row="7" Width="100" Height="20"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" >
+            <Label Content="Username" />
+            <Label Content="Password" />
+        </StackPanel>
 
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <TextBox Name="tbxUsername" Grid.Row="1" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="0"/>
+            <PasswordBox Name="tbxPassword" Grid.Row="2" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="1"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
+            <Button Name="btnExit" Content="close" Height="26" Width="130" Margin="10,1" TabIndex="2"/>
+            <Button Name="btnLogin" Content="Login" Height="26" Width="130" Margin="10,1" TabIndex="3"/>
+        </StackPanel>
 
-               
+        <Image Grid.Row="1" Grid.Column="2" Source="Images/tool-hire-enfield.jpg" Margin="10" Grid.RowSpan="3" Stretch="none"/>
 
     </Grid>
 </Window>
