@@ -40,8 +40,8 @@
         </StackPanel>
         
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <Button Name="btnExit" Content="close" Height="26" Width="130" Margin="10,1" TabIndex="2"/>
-            <Button Name="btnLogin" Content="Login" Height="26" Width="130" Margin="10,1" TabIndex="3"/>
+            <Button Name="btnClose" Content="Close" Click="BtnClose_Click" Height="26" Width="130" Margin="10,1" TabIndex="2"/>
+            <Button Name="btnLogin" Content="Login" Click="BtnLOGON_Click" Height="26" Width="130" Margin="10,1" TabIndex="3"/>
         </StackPanel>
 
         <Image Grid.Row="1" Grid.Column="2" Source="Images/tool-hire-enfield.jpg" Margin="10" Grid.RowSpan="3" Stretch="none"/>
