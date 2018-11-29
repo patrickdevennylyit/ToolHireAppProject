@@ -35,13 +35,14 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
-            <TextBox Name="tbxUsername" Grid.Row="1" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="0"/>
-            <PasswordBox Name="tbxPassword" Grid.Row="2" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="1"/>
+            <TextBox Name="tbxUsername" Grid.Row="1" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="0" ToolTip="Please enter your username here" />
+            <PasswordBox Name="tbxPassword" Grid.Row="2" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="1" ToolTip="Please enter your password here" />
+            <Label Name="lblErrorMessage" Content="" />
         </StackPanel>
         
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
-            <Button Name="btnClose" Content="Close" Click="BtnClose_Click" Height="26" Width="130" Margin="10,1" TabIndex="2"/>
-            <Button Name="btnLogin" Content="Login" Click="BtnLOGON_Click" Height="26" Width="130" Margin="10,1" TabIndex="3"/>
+            <Button Name="btnClose" Content="Close" Click="BtnClose_Click" Height="26" Width="130" Margin="10,1" TabIndex="2" ToolTip="click this button to exit the application" />
+            <Button Name="btnLogin" Content="Login" Click="BtnLOGON_Click" Height="26" Width="130" Margin="10,1" TabIndex="3" ToolTip="click this button to login with your credentials" />
         </StackPanel>
 
         <Image Grid.Row="1" Grid.Column="2" Source="Images/tool-hire-enfield.jpg" Margin="10" Grid.RowSpan="3" Stretch="none"/>
