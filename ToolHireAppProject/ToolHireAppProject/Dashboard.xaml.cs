@@ -23,5 +23,20 @@ namespace ToolHireAppProject
         {
             InitializeComponent();
         }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show(
+"Are you sure?",
+"Please chose an option",
+MessageBoxButton.YesNo,
+MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+
+            }
+        }
     }
 }
