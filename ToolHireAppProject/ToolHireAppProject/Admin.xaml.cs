@@ -24,5 +24,25 @@ namespace ToolHireAppProject
         {
             InitializeComponent();
         }
+
+        private void TbxPassword_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void submnuAddNewUser_Click(object sender, RoutedEventArgs e)
+        {
+            stkUserDetails.Visibility = Visibility.Visible;
+        }
+
+        private void BtnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            stkUserDetails.Visibility = Visibility.Collapsed;
+        }
     }
 }
