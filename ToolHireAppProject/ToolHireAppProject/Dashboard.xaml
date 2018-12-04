@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ToolHireAppProject"
         mc:Ignorable="d"
         WindowState="Maximized"
-        WindowStyle="ToolWindow"
+        WindowStyle="None"
         Title="Dashboard" Height="450" Width="800">
     <Grid>
         <Grid.Background>
@@ -29,7 +29,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
-            <Button Name="btnAdmin" Height="26" Width="100" Content="Admin" Margin="10,0"/>
+            <Button Name="btnAdmin" Height="26" Width="100" Content="Admin" Margin="10,0" Click="BtnAdmin_Click"/>
             <Button Name="btnTool" Height="26" Width="100" Content="Tool" Margin="10,0"/>
             <Button Name="btnExit" Click="BtnExit_Click" Height="26" Width="100" Content="Exit" Margin="10,0"/>
         </StackPanel>

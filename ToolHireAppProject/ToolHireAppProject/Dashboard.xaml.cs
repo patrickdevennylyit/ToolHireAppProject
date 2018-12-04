@@ -38,5 +38,11 @@ MessageBoxImage.Question);
 
             }
         }
+
+        private void BtnAdmin_Click(object sender, RoutedEventArgs e)
+        {
+            Admin admin = new Admin();
+            frnMain.Navigate(admin);
+        }
     }
 }
