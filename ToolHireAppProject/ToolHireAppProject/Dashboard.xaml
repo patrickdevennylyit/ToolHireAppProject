@@ -24,13 +24,14 @@
 
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10">
             <TextBox Name="tbxSearchText" Height="26" Width="100" Margin="10,0"/>
-            <Button Name="btnSearch" Height="26" Width="100" Content="Search" Margin="10,0"/>
-            <Button Name="btnReset" Height="26" Width="100" Content="reset" Margin="10,0"/>
+            <Button Name="btnSearch" Height="26" Width="75" Content="Search" Margin="10,0"/>
+            <Button Name="btnReset" Height="26" Width="75" Content="reset" Margin="10,0"/>
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
-            <Button Name="btnAdmin" Height="26" Width="100" Content="Admin" Margin="10,0" Click="BtnAdmin_Click"/>
-            <Button Name="btnTool" Height="26" Width="100" Content="Tool" Margin="10,0"/>
+            <Button Name="btnAdmin" Height="26" Width="75" Content="Admin" Margin="10,0" Click="BtnAdmin_Click" VerticalAlignment="Top" Visibility="Collapsed"/>
+            <Button Name="btnTool" Height="26" Width="75" Content="Tool" Margin="10,0" VerticalAlignment="Top" Visibility="Collapsed"/>
+            <Button Name="btnManager" Height="26" Width="75" Content="Manager" Margin="10,0" VerticalAlignment="Top" Visibility="Collapsed"/>
             <Button Name="btnExit" Click="BtnExit_Click" Height="26" Width="100" Content="Exit" Margin="10,0"/>
         </StackPanel>
 
