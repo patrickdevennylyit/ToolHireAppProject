@@ -20,6 +20,7 @@ namespace ToolHireAppProject
     /// </summary>
     public partial class MainWindow : Window
     {
+        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=Ccesmo.13;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
         public MainWindow()
         {
             InitializeComponent();
@@ -27,6 +28,24 @@ namespace ToolHireAppProject
 
         private void BtnLOGON_Click(object sender, RoutedEventArgs e)
         {
+            string currentUser = tbxUsername.Text;
+            string currentPassword = tbxPassword.Password;
+            foreach (DBlibraryTH.User user in db.Users)
+
+            {
+                if (user.Username == currentUser && user.Password == currentPassword)
+                {
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.user = user;
+                    dashboard.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    lblErrorMessage.Content = "Please check your username and password";
+                }
+                
+            }
 
         }
 

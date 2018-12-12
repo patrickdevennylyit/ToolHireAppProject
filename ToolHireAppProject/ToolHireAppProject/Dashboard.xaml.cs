@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBlibraryTH;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace ToolHireAppProject
     /// </summary>
     public partial class Dashboard : Window
     {
+        public User user = new User();
         public Dashboard()
         {
             InitializeComponent();
@@ -39,10 +41,11 @@ MessageBoxImage.Question);
             }
         }
 
-        private void BtnAdmin_Click(object sender, RoutedEventArgs e)
+        private void BtnAdmin_Click(object sender, RoutedEventArgs e) => frnMain.Navigate(new Admin());
+
+        private void FrnMain_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
-            Admin admin = new Admin();
-            frnMain.Navigate(admin);
+
         }
     }
 }
