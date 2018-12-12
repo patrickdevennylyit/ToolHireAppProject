@@ -47,5 +47,43 @@ MessageBoxImage.Question);
         {
 
         }
+        private void CheckUserAccess(User user)
+        {
+            if (user.LevelID == 0)
+            {
+                btnAdmin.Visibility = Visibility.Visible;
+                btnManager.Visibility = Visibility.Visible;
+                btnTool.Visibility = Visibility.Visible;        
+            }
+            if (user.LevelID == 1)
+            {
+                btnManager.Visibility = Visibility.Visible;
+                btnTool.Visibility = Visibility.Visible;
+            }
+            if (user.LevelID == 2)
+            {
+                btnTool.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void BtnManager_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnTool_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnExit_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CheckUserAccess(user);
+        }
     }
 }
