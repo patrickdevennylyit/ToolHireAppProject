@@ -26,6 +26,11 @@ namespace ToolHireAppProject
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This part is whats run when the exit button is clicked it wil lclose the app
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnExit_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show(
@@ -47,6 +52,10 @@ MessageBoxImage.Question);
         {
 
         }
+
+        /// <summary>
+        /// This section deals with checking the user access leve upon login then it allocates the allowed buttons for each level        /// </summary>
+        /// <param name="user"></param>
         private void CheckUserAccess(User user)
         {
             if (user.LevelID == 0)
@@ -75,12 +84,12 @@ MessageBoxImage.Question);
         {
 
         }
-
-        private void BtnExit_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
+        /// <summary>
+        /// This is the method run upon authentication it links back to the xaml loaded command it check access before building the dasboard screen 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CheckUserAccess(user);
