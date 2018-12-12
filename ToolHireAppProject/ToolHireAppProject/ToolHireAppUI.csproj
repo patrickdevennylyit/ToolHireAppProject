@@ -127,5 +127,11 @@
     <Resource Include="Images\Delete.png" />
     <Resource Include="Images\ModifyUse.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBlibraryTH\DBlibraryTH.csproj">
+      <Project>{8553afe3-1608-461e-900e-6f6c00d1abe0}</Project>
+      <Name>DBlibraryTH</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
