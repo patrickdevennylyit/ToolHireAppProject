@@ -86,8 +86,10 @@ MessageBoxImage.Question);
 
         private void BtnManager_Click(object sender, RoutedEventArgs e)
         {
-
-        }
+            frnMain.Navigate(new Manager());
+        {
+}
+    }
 
         private void BtnTool_Click(object sender, RoutedEventArgs e)
         {

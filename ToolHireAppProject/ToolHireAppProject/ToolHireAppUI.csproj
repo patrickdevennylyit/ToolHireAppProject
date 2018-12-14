@@ -88,8 +88,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Manager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Manager.xaml.cs">
+      <DependentUpon>Manager.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -132,6 +139,11 @@
       <Project>{8553afe3-1608-461e-900e-6f6c00d1abe0}</Project>
       <Name>DBlibraryTH</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\deltool.png" />
+    <Resource Include="Images\Modifytool.png" />
+    <Resource Include="Images\Tooladd.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -44,5 +44,10 @@ namespace ToolHireAppProject
         {
             stkUserDetails.Visibility = Visibility.Collapsed;
         }
+
+        private void LstUserList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
