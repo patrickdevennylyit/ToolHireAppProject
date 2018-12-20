@@ -20,6 +20,9 @@ namespace ToolHireAppProject
     /// </summary>
     public partial class Manager : Page
     {
+        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=Ccesmo.13;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
+
+        List<DBlibraryTH.Stock> stockList = new List<DBlibraryTH.Stock>();
         public Manager()
         {
             InitializeComponent();
@@ -43,6 +46,16 @@ namespace ToolHireAppProject
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            RefreshToolList();
+        }
+        private void RefreshToolList()
+        {
+            lstToolList.ItemsSource = stockList;
+            foreach (var stock in db.Stocks)
+                stockList.Add(stock);
         }
     }
 }

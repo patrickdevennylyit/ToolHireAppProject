@@ -21,7 +21,9 @@ namespace ToolHireAppProject
     /// </summary>
     public partial class Admin : Page
     {
+        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=Ccesmo.13;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
 
+        List<DBlibraryTH.User> userList = new List<DBlibraryTH.User>();
 
         public Admin()
         {
@@ -56,7 +58,15 @@ namespace ToolHireAppProject
         private void Page_Loaded(object sender, RoutedEventArgs e)
 
         {
-           
+            RefreshUserList();
+        }
+        private void RefreshUserList ()
+        {
+            lstUserList.ItemsSource = userList;
+            foreach (var user in db.Users)
+            {
+                userList.Add(user);
+            }
         }
     }
 }

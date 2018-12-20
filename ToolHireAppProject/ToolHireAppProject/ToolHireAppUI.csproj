@@ -152,5 +152,8 @@
     <Resource Include="Images\Modifytool.png" />
     <Resource Include="Images\Tooladd.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lstUserList\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

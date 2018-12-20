@@ -60,7 +60,7 @@
                                     <GridViewColumn Header="Surname" Width="150">
                                         <GridViewColumn.CellTemplate>
                                             <DataTemplate>
-                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Surname}" />
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Lastname}"/>
                                             </DataTemplate>
                                         </GridViewColumn.CellTemplate>
                                     </GridViewColumn>
@@ -68,7 +68,7 @@
                                     <GridViewColumn Header="Forename" Width="150">
                                         <GridViewColumn.CellTemplate>
                                             <DataTemplate>
-                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Forename}"/>
+                                                <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" Text="{Binding Firstname}"/>
                                             </DataTemplate>
                                         </GridViewColumn.CellTemplate>
                                     </GridViewColumn>
@@ -94,12 +94,12 @@
                                                 <Image Source="images/add.png" />
                                             </MenuItem.Icon>
                                         </MenuItem>
-                                        <MenuItem Header="Modify selected User" Name="submnuModifySelectedUser" IsEnabled="False">
+                                        <MenuItem Header="Modify selected User" Name="submnuModifySelectedUser" IsEnabled="True">
                                             <MenuItem.Icon>
                                                 <Image Source="images/modifyuse.jpg" />
                                             </MenuItem.Icon>
                                         </MenuItem>
-                                        <MenuItem Header="Delete selected User" Name="submnuDeleteSelectedUser" IsEnabled="False">
+                                        <MenuItem Header="Delete selected User" Name="submnuDeleteSelectedUser" IsEnabled="True">
                                             <MenuItem.Icon>
                                                 <Image Source="images/delete.png" />
                                             </MenuItem.Icon>
