@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBlibraryTH;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,8 @@ namespace ToolHireAppProject
     /// </summary>
     public partial class Admin : Page
     {
+
+
         public Admin()
         {
             InitializeComponent();
@@ -48,6 +51,12 @@ namespace ToolHireAppProject
         private void LstUserList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+
+        {
+           
         }
     }
 }

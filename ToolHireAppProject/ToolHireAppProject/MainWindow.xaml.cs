@@ -21,6 +21,7 @@ namespace ToolHireAppProject
     public partial class MainWindow : Window
     {
         DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=Ccesmo.13;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,8 +38,10 @@ namespace ToolHireAppProject
                 {
                     Dashboard dashboard = new Dashboard();
                     dashboard.user = user;
+                    dashboard.Owner = this;
                     dashboard.ShowDialog();
                     this.Hide();
+
                 }
                 else
                 {
@@ -60,6 +63,7 @@ namespace ToolHireAppProject
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();
+                Environment.Exit(0);
 
             }
         }

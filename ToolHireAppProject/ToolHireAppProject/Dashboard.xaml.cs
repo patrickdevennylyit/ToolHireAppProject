@@ -42,6 +42,7 @@ MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();
+                Environment.Exit(0);
 
             }
         }
@@ -93,7 +94,7 @@ MessageBoxImage.Question);
 
         private void BtnTool_Click(object sender, RoutedEventArgs e)
         {
-
+            frnMain.Navigate(new ToolBooking());
         }
     }
 }

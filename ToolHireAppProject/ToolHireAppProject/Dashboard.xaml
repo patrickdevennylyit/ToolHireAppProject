@@ -30,9 +30,9 @@
         </StackPanel>
 
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
-            <Button Name="btnAdmin" Height="26" Width="80" Content="Admin" Margin="10,0" Click="BtnAdmin_Click"/>
-            <Button Name="btnManager" Height="26" Width="80" Content="Manager" Margin="10,0" Click="BtnManager_Click"/>
-            <Button Name="btnTool" Height="26" Width="80" Content="Tool" Margin="10,0" Click="BtnTool_Click"/>
+            <Button Name="btnAdmin" Height="26" Width="80" Content="Admin" Margin="10,0" Visibility="Collapsed" Click="BtnAdmin_Click"/>
+            <Button Name="btnManager" Height="26" Width="80" Content="Manager" Margin="10,0" Visibility="Collapsed" Click="BtnManager_Click"/>
+            <Button Name="btnTool" Height="26" Width="80" Content="Tool" Margin="10,0" Visibility="Collapsed" Click="BtnTool_Click"/>
             <Button Name="btnExit" Click="BtnExit_Click" Height="26" Width="50" Content="Exit" Margin="10,0"/>
         </StackPanel>
 
