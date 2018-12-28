@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace ToolHireAppProject
 {
     /// <summary>
-    /// Interaction logic for Admin.xaml
+    /// Interaction logic for Admin.xaml this also references the DB we are using for the app and the user table
     /// </summary>
     public partial class Admin : Page
     {
-        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=Ccesmo.13;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
+        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=pa55word;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
 
         List<DBlibraryTH.User> userList = new List<DBlibraryTH.User>();
 
@@ -60,6 +60,9 @@ namespace ToolHireAppProject
         {
             RefreshUserList();
         }
+        /// <summary>
+        /// This is the section where by the users from the DB get displayed to the grid on the users tab
+        /// </summary>
         private void RefreshUserList ()
         {
             lstUserList.ItemsSource = userList;

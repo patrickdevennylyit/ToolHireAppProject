@@ -16,17 +16,24 @@ using System.Windows.Shapes;
 namespace ToolHireAppProject
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml this loging process will reference the username and password entered against the DB 
+    /// if a match is found it will authenticate via the DB if not it will return an error.
     /// </summary>
     public partial class MainWindow : Window
     {
-        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=Ccesmo.13;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
+        DBlibraryTH.ToolHireDBEntities1 db = new DBlibraryTH.ToolHireDBEntities1("metadata=res://*/ToolHireModel.csdl|res://*/ToolHireModel.ssdl|res://*/ToolHireModel.msl;provider=System.Data.SqlClient;provider connection string='data source=192.168.109.128;initial catalog=ToolHireDB;persist security info=True;user id=paddy;password=pa55word;pooling=False;MultipleActiveResultSets=True;App=EntityFramework'");
 
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This is whats processed when the logon button is clicked ie this is the code behind the event handler it routes the entered user name and password 
+        /// arguemwnts and checks them against the entries in the users DB if the user name and and password match then they get authenticated if they dont match
+        /// the specified error is displayed on the screen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnLOGON_Click(object sender, RoutedEventArgs e)
         {
             string currentUser = tbxUsername.Text;
@@ -51,7 +58,12 @@ namespace ToolHireAppProject
             }
 
         }
-
+        /// <summary>
+        /// This part deals with the closing of the app from the login sceen when thew clse button is selected
+        /// It prompts the user to select a yes or no option
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClose_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show(

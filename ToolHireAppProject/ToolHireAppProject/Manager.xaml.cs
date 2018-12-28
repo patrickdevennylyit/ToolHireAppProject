@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace ToolHireAppProject
 {
     /// <summary>
-    /// Interaction logic for Manager.xaml
+    /// Interaction logic for Manager.xamland references to the DB in use and the stock table 
     /// </summary>
     public partial class Manager : Page
     {
@@ -56,6 +56,16 @@ namespace ToolHireAppProject
             lstToolList.ItemsSource = stockList;
             foreach (var stock in db.Stocks)
                 stockList.Add(stock);
+        }
+
+        private void LstToolList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void BtnCustomerUpdate_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

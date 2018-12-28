@@ -30,15 +30,17 @@
                 <TabItem Header="Users">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="389*"/>
+                            <ColumnDefinition Width="16*"/>
+                            <ColumnDefinition Width="63*"/>
+                            <ColumnDefinition Width="715*"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50*"/>
                             <RowDefinition Height="50*"/>
                         </Grid.RowDefinitions>
-
-                        <ListView Name="lstUserList" Grid.Row="0" Grid.ColumnSpan="2" SelectionChanged="LstUserList_SelectionChanged">
+<!--this list view will list all of the Users from the user DB in the order of Username, Password Surnale, Forname and Access Level
+    This will be read from the DB and displayed on the screen fore selection by the user                    -->
+                        <ListView Name="lstUserList" Grid.Row="0" Grid.ColumnSpan="3" SelectionChanged="LstUserList_SelectionChanged">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn Header="Username" Width="150">
@@ -85,7 +87,9 @@
 
                                 </GridView>
                             </ListView.View>
-
+<!--this is the listview for when right click is selected it will bring up a menu containing Add, Modify & Delet of users the IsEnaabled can be set 
+    to True or False if set to true the user can select it if set at false the user can not select it as its effectively greyed out each one has its
+     own image as can be seen specified in Image Source-->
                             <ListView.ContextMenu>
                                 <ContextMenu Name="mnuUserListOverview" IsEnabled="True">
                                     <ContextMenu.Items>
@@ -109,8 +113,10 @@
                             </ListView.ContextMenu>
                         </ListView>
 
-
-                        <StackPanel Name="stkUserDetails" Grid.Row="1" HorizontalAlignment="Center" Visibility="Collapsed" Grid.Column="1" Margin="395,0,383,0">
+ <!--this is the Stack panel displayed when Add Modify or Delete is selected it wil lpresent a corresponding data field for the Username, Password, 
+     Surname, Forename and finally present a combo box where one of 3 levels of access is selected finally there is an update this will have an 
+     event handler that will add modify or delete from the DB-->
+                        <StackPanel Name="stkUserDetails" Grid.Row="1" HorizontalAlignment="Center" Visibility="Collapsed" Grid.Column="2" Margin="332,0,383,0">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="30*"/>
@@ -149,7 +155,7 @@
                     </Grid>
 
                 </TabItem>
-
+<!--this is the list view section for the "Logs" tab is wil lbe similar fashion to the one fro "Users" above-->
                 <TabItem Header="Logs">
 
                 </TabItem>

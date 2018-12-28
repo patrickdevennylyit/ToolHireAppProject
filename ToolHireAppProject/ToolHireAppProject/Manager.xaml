@@ -26,6 +26,9 @@
 
                     </Style>
                 </TabControl.Resources>
+                <!--this section deals with the first tab called tools its similar to the setup on the Admin page but to reflect the Tools
+                or stock from the Stock table in the DB from here a manager wil lbe abel to add modify or delete stock similar to the way
+                the admin user was abel do for the users-->
                 <TabItem Header="Tools">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -33,7 +36,7 @@
                             <RowDefinition Height="50*"/>
                         </Grid.RowDefinitions>
 
-                        <ListView Name="lstToolList" Grid.Row="0">
+                        <ListView Name="lstToolList" Grid.Row="0" Grid.ColumnSpan="2" SelectionChanged="LstToolList_SelectionChanged">
                             <ListView.View>
                                 <GridView>
                                     <GridViewColumn Header="ToolID" Width="150">
@@ -128,7 +131,13 @@
                     </Grid>
 
                 </TabItem>
+                <!--this section is for the Customer setup the manager will have the ability to add customers as well once functional in the 
+                ToolBooking page this section will be copied and pasted here-->
+                <TabItem Header="Customers">
+                    
 
+                </TabItem>
+                <!--this section is for the Booking setup the manager will have the ability to book tools out to customers as well -->
                 <TabItem Header="Booking">
 
                 </TabItem>

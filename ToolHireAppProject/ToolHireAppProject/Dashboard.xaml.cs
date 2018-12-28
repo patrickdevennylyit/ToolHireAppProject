@@ -46,7 +46,11 @@ MessageBoxImage.Question);
 
             }
         }
-
+        /// <summary>
+        ///  this is what is instructed to do when the "Admin" button is selected it will mavigate to the "Admin" page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAdmin_Click(object sender, RoutedEventArgs e) => frnMain.Navigate(new Admin());
 
         private void FrnMain_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
@@ -55,7 +59,9 @@ MessageBoxImage.Question);
         }
         
         /// <summary>
-        /// This section deals with checking the user access leve upon login then it allocates the allowed buttons for each level        /// </summary>
+        /// This section deals with checking the user access leve upon login then it allocates the allowed buttons for each level, additionally it will
+        /// display only certain buttons for each user depending on their access level see corresponding LevelIDs 0, 1, & 2 below where 0, 1, & 2 are 
+        /// Admin, Manager & User respectively/// </summary>
         /// <param name="user"></param>
         private void CheckUserAccess(User user)
         {
@@ -84,14 +90,22 @@ MessageBoxImage.Question);
         {
             CheckUserAccess(user);
         }
-
+        /// <summary>
+        /// this is what is instructed to do when the "Manager" button is selected it will mavigate to the "Manager" page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnManager_Click(object sender, RoutedEventArgs e)
         {
             frnMain.Navigate(new Manager());
         {
 }
     }
-
+        /// <summary>
+        /// this is what is instructed to do when the "Tool" button is selected it will mavigate to the "Tool" page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnTool_Click(object sender, RoutedEventArgs e)
         {
             frnMain.Navigate(new ToolBooking());

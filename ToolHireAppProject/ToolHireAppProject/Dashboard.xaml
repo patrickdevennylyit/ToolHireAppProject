@@ -10,6 +10,8 @@
         Loaded="Window_Loaded"
         Title="Dashboard" Height="450" Width="800">
     <Grid>
+        <!--this section deals with setting up the main part of the dashboard secreen, pointing it to a background image
+        and giving it a certain ammount of opacity (transparency) -->
         <Grid.Background>
             <ImageBrush ImageSource="Images/dashback.jpg" Stretch="UniformToFill" Opacity=".20"></ImageBrush>
         </Grid.Background>
@@ -22,13 +24,14 @@
             <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="50*"/>
         </Grid.ColumnDefinitions>
-
+<!-- this stackpanel contains the search box search button and the reset button is for the search field a-->
         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,10,0,10">
             <TextBox Name="tbxSearchText" Height="26" Width="75" Margin="10,0"/>
             <Button Name="btnSearch" Height="26" Width="75" Content="Search" Margin="10,0"/>
             <Button Name="btnReset" Height="26" Width="75" Content="reset" Margin="10,0"/>
         </StackPanel>
-
+<!--this stack panel contains the buttons Admin Manager Tool & Exit by default they ar hiddent (Visibility="collapsed")
+        and depending what access level the logged on user will have it will determine what buttons are shown -->
         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,10">
             <Button Name="btnAdmin" Height="26" Width="80" Content="Admin" Margin="10,0" Visibility="Collapsed" Click="BtnAdmin_Click"/>
             <Button Name="btnManager" Height="26" Width="80" Content="Manager" Margin="10,0" Visibility="Collapsed" Click="BtnManager_Click"/>

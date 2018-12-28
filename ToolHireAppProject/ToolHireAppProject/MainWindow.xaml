@@ -8,7 +8,10 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         Title="Tooled Up Booking App" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800">
-    <Grid>
+    <!-- Lines above are basically center the app to the screen and give it a headding and will stay within the min and max 
+    Heights specified
+    -->
+    <Grid> <!-- this is where the grid colum and row definitions are define-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="*" />
@@ -20,7 +23,8 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
+<!--This is where the initial instruction message is handled as you can see its in the 1st row and 1st column but is  centered#
+        and is allowed to spawn all 3 columns if the test is too much for one column and the font size has been set to "20"-->
         <Label Name="lblHeading" 
                Grid.Row="0" 
                Grid.Column="0" 
@@ -28,23 +32,29 @@
                HorizontalContentAlignment="Center" 
                FontSize="20" 
                Content="Please Login to the Tool Hire Booking Application" />
-
+<!--Stackpanel for the username and password text boxes placing them in row 1 colum 0-->
         <StackPanel Grid.Row="1" Grid.Column="0" >
             <Label Content="Username" />
             <Label Content="Password" />
         </StackPanel>
-
+<!--Stackpanel for the user name and the password textboxes and the error message box if an incorrect user password combo was 
+        entered also included is password box so as its textfield will not be readable to anyone it will just appear as dots
+        I have also tab indexed these fields and buttons so the user can press the tab button to navigate through the fields
+        and buttons without having to use the mouse plus added tool tips so when the user hovers over these fields they will 
+        get a tip on what to do -->
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
             <TextBox Name="tbxUsername" Grid.Row="1" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="0" ToolTip="Please enter your username here" />
             <PasswordBox Name="tbxPassword" Grid.Row="2" Grid.Column="1" Height="20" Width="200" Margin="3" TabIndex="1" ToolTip="Please enter your password here" />
             <Label Name="lblErrorMessage" Content="" />
         </StackPanel>
-        
+ <!--Stack panel for the close and login buttons placed in row 3 column 0 continued with the tab index from above and added
+        tool tips for the buttons-->
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
             <Button Name="btnClose" Content="Close" Click="BtnClose_Click" Height="26" Width="130" Margin="10,1" TabIndex="2" ToolTip="click this button to exit the application" />
             <Button Name="btnLogin" Content="Login" Click="BtnLOGON_Click" Height="26" Width="130" Margin="10,1" TabIndex="3" ToolTip="click this button to login with your credentials" />
         </StackPanel>
-
+<!-- this is where the image is palced on the app its placing the image on row 1 column 2 its allowed to spawn and stretch 
+        has been disabled -->
         <Image Grid.Row="1" Grid.Column="2" Source="Images/tool-hire-enfield.jpg" Margin="10" Grid.RowSpan="3" Stretch="none"/>
 
     </Grid>
